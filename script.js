@@ -12,6 +12,12 @@ function compareNumbers(a, b) {
     return b.stars - a.stars;
 }
 
+async function getUserInfo(username) {
+    const response = await fetch(`${usersEnspoint}/${username}`);
+    const data = await response.json();
+    console.log(data);
+}
+
 async function getReposList(username) {
     reposList = [];
     const response = await fetch(`${usersEnspoint}/${username}/repos`);
@@ -28,9 +34,10 @@ async function getReposList(username) {
         reposList.push(push);
     }
     reposList.sort(compareNumbers);
-    console.log(reposList)
 }
+
 //TODO1: alternative for displayed nulls
+//TODO3: add loading spinner
 function displayRepos() {
     main.innerHTML = '';
     const html = reposList
@@ -59,6 +66,7 @@ async function handleSubmit(event) {
 
     const username = input.value;
     input.value = '';
+    await getUserInfo(username).catch(handleError);
     await getReposList(username).catch(handleError);
     displayRepos(username);
 }
