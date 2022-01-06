@@ -8,6 +8,10 @@ const main = document.querySelector('div.main');
 
 let reposList = []
 
+function compareNumbers(a, b) {
+    return b.stars - a.stars;
+}
+
 async function getReposList(username) {
     reposList = [];
     const response = await fetch(`${usersEnspoint}/${username}/repos`);
@@ -23,6 +27,7 @@ async function getReposList(username) {
         };
         reposList.push(push);
     }
+    reposList.sort(compareNumbers);
     console.log(reposList)
 }
 
