@@ -5,6 +5,8 @@ const form = document.querySelector('#form');
 const input = document.querySelector('input');
 const log = document.querySelector('#log');
 const main = document.querySelector('div.main');
+const aside = document.querySelector('aside');
+
 
 let reposList = []
 
@@ -12,10 +14,25 @@ function compareNumbers(a, b) {
     return b.stars - a.stars;
 }
 
-async function getUserInfo(username) {
+async function displayUserInfo(username) {
     const response = await fetch(`${usersEnspoint}/${username}`);
     const data = await response.json();
     console.log(data);
+    const html = `<aside class='bio'>
+              <a href="${data.html_url}" target="_blank"><img src="${data.avatar_url}" alt="${data.name} avatar"></a>
+              <section>
+                  <h4>
+                    <a href="${data.html_url}" target="_blank">${data.name}</a>
+                  </h4>
+                  <p>${data.bio}</p>
+                  <small>
+                      <span>🌍 ${data.location}</span>
+                      <a href="${data.blog}" target="_blank">🔗 ${data.blog}</a>
+                  </small>
+              </section>
+          </aside>`;
+  log.innerHTML = `Repositories - ${data.public_repos}`;
+  aside.innerHTML = html;
 }
 
 async function getReposList(username) {
@@ -66,7 +83,7 @@ async function handleSubmit(event) {
 
     const username = input.value;
     input.value = '';
-    await getUserInfo(username).catch(handleError);
+    await displayUserInfo(username).catch(handleError);
     await getReposList(username).catch(handleError);
     displayRepos(username);
 }
