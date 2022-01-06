@@ -30,6 +30,22 @@ async function getReposList(username) {
     reposList.sort(compareNumbers);
     console.log(reposList)
 }
+//TODO1: alternative for displayed nulls
+function displayRepos() {
+    main.innerHTML = '';
+    const html = reposList
+      .map(
+        (element) => `<article>
+          <header class='result'>
+              <h3><a rel="bookmark" href="${element.url}" target="_blank">${element.resultName} </a></h3>
+              <small>${element.language} •  ${element.stars}⭐</small>
+          </header>
+          <p class='description'>${element.description}</p>
+      </article>`
+      )
+      .join('');
+    main.innerHTML = html;
+  }
 
 function handleError(err) {
     console.log('Error');
@@ -37,12 +53,14 @@ function handleError(err) {
     aside.textContent = `Something went wrong: ${err}`;
 }
 
-async function logSubmit(event) {
+//TODO2: security issues (XSS)
+async function handleSubmit(event) {
     event.preventDefault();
 
     const username = input.value;
     input.value = '';
     await getReposList(username).catch(handleError);
+    displayRepos(username);
 }
 
-form.addEventListener('submit', logSubmit);
+form.addEventListener('submit', handleSubmit);
