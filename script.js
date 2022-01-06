@@ -77,7 +77,6 @@ function handleError(err) {
     aside.textContent = `Something went wrong: ${err}`;
 }
 
-//TODO2: security issues (XSS)
 async function handleSubmit(event) {
     event.preventDefault();
 

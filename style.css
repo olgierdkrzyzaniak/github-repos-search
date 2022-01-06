@@ -1,0 +1,147 @@
+/* elements styles */
+
+body {
+    background-color: white;
+}
+
+div {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:42rem;
+    padding:2.625rem 1.3125rem;
+}
+
+
+nav {
+    border-width: 0 1.3125rem;
+    border-color: white;
+    background-color: white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: sticky;
+    top: -10px;
+    z-index: 1;
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+article {
+    margin-bottom:2.625rem;
+}
+
+aside {
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1rem;
+}
+
+img {
+    padding: 1rem;
+    margin-right:0.875rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius:50%;
+    align-self: center;
+}
+
+small {
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:2rem;
+    line-height:2.625rem;
+    margin-bottom:0;
+    margin-top:0
+}
+
+h3 {
+    font-family:Montserrat, sans-serif;
+    font-size:1.75rem;
+    margin-bottom:0.4375rem
+}
+
+h4 {
+    margin-top: 1rem;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    font-family: 'Merriweather','Georgia',serif;
+    
+}
+
+a {
+    color: #FF5800;
+    text-decoration: none; 
+    transition: color 0.1s ease-in-out;
+}
+
+a:hover{
+    color: #ff7931;
+}
+
+/* classes styles */
+
+div.main {
+    padding: 0;
+}
+
+.bio {
+    padding-bottom: 1rem;
+}
+
+.result {
+    display: block;
+
+}
+
+.container {
+    margin-bottom: 2rem;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+.searchInput {
+    width: 100%;
+    border: 3px solid #ff7931;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-family: 'Merriweather','Georgia',serif;
+  }
+  
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 3px solid;
+    border-width: 3px 3px 3px 0px;
+    border-color: #ff7931;
+    background: white;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+/* ids styles */
+
+#lens {
+    margin: 0;
+    margin-bottom: 0.1rem;
+}
