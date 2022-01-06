@@ -95,6 +95,17 @@ div.main {
     padding: 0;
 }
 
+.button {
+    width: 40px;
+    height: 36px;
+    border: 0px solid;
+    background: white;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
 .bio {
     padding-bottom: 1rem;
 }
@@ -138,10 +149,45 @@ div.main {
     cursor: pointer;
     font-size: 20px;
   }
+.pages {
+    padding-top: 1rem;
+}
 
 /* ids styles */
 
 #lens {
     margin: 0;
     margin-bottom: 0.1rem;
+}
+
+div.pages {
+    padding: 1rem 0 1rem 0;
+}
+
+a.button {
+    text-decoration: none;
+    margin-top: 1rem;
+    padding: 8px 16px;
+    border-radius: 0.2rem;
+    font-size: 90%;
+  }
+  
+a.button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.prev {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #ff7931;
+    color: white;
+}
+
+#log {
+    font-family:Montserrat, sans-serif;
+    padding: 0;
 }
