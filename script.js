@@ -29,8 +29,8 @@ async function displayUserInfo(username) {
                   </h4>
                   <p>${data.bio}</p>
                   <small>
-                      <span>🌍 ${data.location}</span>
-                      <a href="${data.blog}" target="_blank">🔗 ${data.blog}</a>
+                      <span>🌍 ${data.location || 'unknown'}</span>
+                      <a href="${data.blog}" target="_blank">🔗 ${data.blog || 'no blog'}</a>
                   </small>
               </section>
           </aside>`;
@@ -60,7 +60,6 @@ async function getReposList(username) {
     
 }
 
-//TODO1: alternative for displayed nulls
 function displayRepos(start, stop) {
     console.log(start-1, stop)
     main.html
@@ -70,9 +69,9 @@ function displayRepos(start, stop) {
         (element) => `<article>
           <header class='result'>
               <h3><a rel="bookmark" href="${element.url}" target="_blank">${element.resultName} </a></h3>
-              <small>${element.language} •  ${element.stars}⭐</small>
+              <small>${element.language  || 'unknown'} •  ${element.stars}⭐</small>
           </header>
-          <p class='description'>${element.description}</p>
+          <p class='description'>${element.description  || 'no description'}</p>
       </article>`
       )
       .join('');
