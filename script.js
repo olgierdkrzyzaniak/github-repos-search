@@ -20,7 +20,6 @@ function compareNumbers(a, b) {
 
 async function displayUserInfo(username) {
   const response = await fetch(`${usersEnspoint}/${username}`);
-  console.log(response)
   userFound = (response.status === 200);
   if(userFound){
     const data = await response.json();
@@ -63,12 +62,10 @@ async function getReposList(username) {
     }
   }
   reposList.sort(compareNumbers);
-  console.log(reposList);
 }
 
 function displayRepos(start, stop) {
   displayPageNav();
-  console.log(start - 1, stop);
   const html = reposList
     .slice(start - 1, stop)
     .map(
@@ -85,7 +82,6 @@ function displayRepos(start, stop) {
 }
 
 function handleError(err) {
-  console.log('Error');
   console.log(err);
   aside.innerHTML = `<p> 😔 Something went wrong. Try entering the username again.
   </p>`;
@@ -120,7 +116,6 @@ function pagesDelegation(event) {
     if (lastRepoOnPage <= reposNum) {
       firstRepoOnPage += 100;
       lastRepoOnPage += 100;
-      console.log(reposNum, lastRepoOnPage)
       displayRepos(firstRepoOnPage, lastRepoOnPage);
     }
   }
