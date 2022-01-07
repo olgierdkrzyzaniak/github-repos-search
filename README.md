@@ -16,7 +16,7 @@ git clone https://github.com/olgierdkrzyzaniak/github-repos-search.git
 
 ![Download tutorial](https://user-images.githubusercontent.com/63750397/148561789-137d6b43-1479-4cff-9b21-738aa0d070e4.png)
 
-1. Uruchomienie strony hostowanej przez github.
+2. Uruchomienie strony hostowanej przez github.
     - kliknij w w ten link:
 
 ### Użyte technologie
