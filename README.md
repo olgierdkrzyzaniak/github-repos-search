@@ -14,7 +14,7 @@ git clone https://github.com/olgierdkrzyzaniak/github-repos-search.git
 
 - w innym wypadku na stronie repozytorium pobierz ZIP (klikając Code → Download ZIP). Rozpakuj go na swoim komputerze.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f95d075e-7f67-4d7d-b135-9729a65e96c5/Untitled.png)
+![Download tutorial](https://user-images.githubusercontent.com/63750397/148561789-137d6b43-1479-4cff-9b21-738aa0d070e4.png)
 
 1. Uruchomienie strony hostowanej przez github.
     - kliknij w w ten link:
@@ -38,8 +38,7 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 > Unauthenticated clients can make 60 requests per hour. To get more requests per hour, we'll need to *authenticate*.
 > 
 - Zdecydowałem się, aby prościej i szybciej było uruchomić program nie używać żadnych metod autoryzacji. Podczas pisania i testowania zdarzyło mi się wyczerpać ten limit raz (przy pisaniu CSS).
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea8b0e22-dbce-499a-a549-717a7aa430a4/Untitled.png)
+![Github Docs](https://user-images.githubusercontent.com/63750397/148561704-6fd67ae8-cab7-4f57-8f4f-24271aa48436.png)
 
 - Niestety nie ma możliwości pobrania z API już posortowanej (po liczbie gwiazdek) listy repozytoriów. Może być jedno z: `created`, `updated`, `pushed`, `full_name`.
     
@@ -70,6 +69,6 @@ Badania użyteczności wykazały:
 
 ### Exporty z figmy
 
-![Lo-fi.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6226a77b-e1d9-4540-b960-99233fad276a/Lo-fi.png)
+![Lo-fi](https://user-images.githubusercontent.com/63750397/148561354-fee4be00-1647-4ec4-8bb6-196d8715f155.png)
+![Hi-fi](https://user-images.githubusercontent.com/63750397/148561357-cc924265-7929-4c6d-91f8-6300d6932f95.png)
 
-![Hi-fi.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a92fd9c0-3317-41d8-aaf6-d43d2e07a454/Hi-fi.png)
