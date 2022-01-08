@@ -12,11 +12,13 @@ Browser for repositories of individual users on github
 git clone https://github.com/olgierdkrzyzaniak/github-repos-search.git
 ```
 
-- w innym wypadku na stronie repozytorium pobierz ZIP (klikając Code → Download ZIP). Rozpakuj go na swoim komputerze.
+- w innym wypadku ze strony repozytorium pobierz ZIP (klikając Code → Download ZIP). Rozpakuj go na swoim komputerze.
 
 ![Download tutorial](https://user-images.githubusercontent.com/63750397/148561789-137d6b43-1479-4cff-9b21-738aa0d070e4.png)
 
-1. Uruchomienie strony hostowanej przez github.
+- uruchom plik index.html w przeglądarce.
+
+2. Uruchomienie strony hostowanej przez github.
     - kliknij w w ten link:
 
 ### Użyte technologie
@@ -36,8 +38,9 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 **Przyjęte założenia/uproszczenia:**
 
 > Unauthenticated clients can make 60 requests per hour. To get more requests per hour, we'll need to *authenticate*.
-> 
+ 
 - Zdecydowałem się, aby prościej i szybciej było uruchomić program nie używać żadnych metod autoryzacji. Podczas pisania i testowania zdarzyło mi się wyczerpać ten limit raz (przy pisaniu CSS).
+
 ![Github Docs](https://user-images.githubusercontent.com/63750397/148561704-6fd67ae8-cab7-4f57-8f4f-24271aa48436.png)
 
 - Niestety nie ma możliwości pobrania z API już posortowanej (po liczbie gwiazdek) listy repozytoriów. Może być jedno z: `created`, `updated`, `pushed`, `full_name`.
@@ -55,10 +58,9 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 - Zastosowałem podejście Mobile-first design (filozofia projektowania, która ma na celu stworzenie lepszych doświadczeń użytkownika poprzez rozpoczęcie procesu projektowania z myślą o urządzeniach mobilnych), aby zapewnić dobrą responsywność
 - poza formularzem pozwalający na wprowadzenie nazwy użytkownika oraz listą repozytoriów pojawiającą się jako wynik zdecydowałem się dodatkowo zamieścić krótkie bio wyszukiwanego użytkownika, pozwalającą sprecyzować czy odnaleźliśmy właściwą osobę, oraz dostarczającą podstawowych informacji na temat użytkownika. Nazwa użytkownika zawiera link przenoszący do strony na githubie.
 - Navbar z logiem i inputetm oraz page navigator pozostają widoczne u góry ekranu przy scrollowaniu, aby można było za ich pomocą wykonywać akcje natychmiastowo, nawet jeśli nie jesteśmy na górze strony.
-- Nazwa repozytorium zawiera link przenoszący do strony repozytorium na githubie
+- Nazwa repozytorium zawiera link przenoszący do strony repozytorium na githubie.
 - Każde zwrócone repozytorium ma dodatkowo informację na temat języka, liczby gwiazdek oraz krótki opis.
-- Czysto estetyczna, zdecydowałem się na minimalistyczny projekt graficzny. Dużo whitespace, niewiele kolorów o dużym kontraście. Zapewnia to odpowiednią czytelność całości
-- Zastosowanie prostej w zrozumieniu dla użytkownika architektury pionowej. Cały proces to podróż z góry na dół po kolejnych stopniach.
+- Czysto estetyczna, zdecydowałem się na minimalistyczny projekt graficzny. Dużo whitespace, niewiele kolorów o dużym kontraście. Zapewnia to odpowiednią czytelność całości.
 
 ### Badanie użyteczności
 
