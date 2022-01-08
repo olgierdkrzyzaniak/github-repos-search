@@ -89,7 +89,7 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 ### Tłumaczę niektóre decyzje projektowe tutaj:
 
 - Zastosowałem podejście Mobile-first design (filozofia projektowania, która ma na celu stworzenie lepszych doświadczeń użytkownika poprzez rozpoczęcie procesu projektowania z myślą o urządzeniach mobilnych), aby zapewnić dobrą responsywność
-- poza formularzem pozwalający na wprowadzenie nazwy użytkownika oraz listą repozytoriów pojawiającą się jako wynik zdecydowałem się dodatkowo zamieścić krótkie bio wyszukiwanego użytkownika, pozwalającą sprecyzować czy odnaleźliśmy właściwą osobę, oraz dostarczającą podstawowych informacji na temat użytkownika. Nazwa użytkownika zawiera link przenoszący do strony na githubie.
+- poza formularzem pozwalającym na wprowadzenie nazwy użytkownika oraz listą repozytoriów pojawiającą się jako wynik zdecydowałem się dodatkowo zamieścić krótkie bio wyszukiwanego użytkownika, pozwalające sprecyzować czy odnaleźliśmy właściwą osobę, oraz dostarczającą podstawowych informacji na temat użytkownika. Nazwa użytkownika zawiera link przenoszący do strony na githubie.
 - Navbar z logiem i inputetm oraz page navigator pozostają widoczne u góry ekranu przy scrollowaniu, aby można było za ich pomocą wykonywać akcje natychmiastowo, nawet jeśli nie jesteśmy na górze strony.
 - Nazwa repozytorium zawiera link przenoszący do strony repozytorium na githubie.
 - Każde zwrócone repozytorium ma dodatkowo informację na temat języka, liczby gwiazdek oraz krótki opis.
@@ -100,7 +100,7 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 Badania użyteczności wykazały:
 
 - potrzebę podziału wyników na parę stron (w przypadku allegro gdzie repozytoriów jest 104 brak podziału nie stanowił takiego problemu jak np. w przypadku google, gdzie jest ich 2166)
-- dobrze aby wyświetlana była liczba zwróconych repozytoriów
+- potrzebę wyświetlania liczby zwróconych repozytoriów
 
 ### Exporty z figmy
 
