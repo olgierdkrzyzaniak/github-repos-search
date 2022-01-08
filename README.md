@@ -18,7 +18,40 @@ git clone https://github.com/olgierdkrzyzaniak/github-repos-search.git
 
 - uruchom plik index.html w przeglądarce.
 
-2. Uruchomienie strony hostowanej przez github.
+2. Uruchomienie przez serwer lokalny.
+    
+    Aby uruchomić musisz mieć skonfigurowany node.js
+    
+    > Ta wersja nie różni się niczym od powyższej, ale nie korzysta z kodu pliku script.js, tylko z pliku app.js i zawartości folderu lib (które są podzielonym na moduły plikiem script.js). Aby oszczędzić twój czas polecam korzystanie z opcji nr 1, natomiast ta jest bliższa temu co zastosowałbym na produkcji.
+    > 
+    
+    Instrukcje postępowania:
+    
+    - Otwórz plik `index.html` w edytorze tekstu. Zmień wiersz:
+    
+    ```jsx
+    <script src="./script.js"></script>
+    ```
+    
+    na:
+    
+    ```jsx
+    <script src="./app.js" type='module'></script>
+    ```
+    
+    - Otwórz terminal.
+    - Zainstaluj `http-server` wpisując `npm install -g http-server`
+    - Przejdź do katalogu roboczego, w którym znajduje się index.html używając komendy `cd {ścieżka folderu roboczego}` np.
+    
+    ```bash
+    cd C:\Users\Olgierd\Desktop\github-repos-search
+    ```
+    
+    - Uruchom swój serwer http, wywołując `http-server -c-1`
+    
+    Powoduje to uruchomienie serwera http Node.js, który obsługuje pliki w twoim katalogu jako pliki statyczne dostępne z `http://localhost:8080`
+
+3. Uruchomienie strony hostowanej przez github.
     - kliknij w w ten link:
 
 ### Użyte technologie
