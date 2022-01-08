@@ -52,7 +52,7 @@ git clone https://github.com/olgierdkrzyzaniak/github-repos-search.git
     Powoduje to uruchomienie serwera http Node.js, który obsługuje pliki w twoim katalogu jako pliki statyczne dostępne z `http://localhost:8080`
 
 3. Uruchomienie strony hostowanej przez github.
-    - kliknij w w ten link:
+    - kliknij w w ten link: [https://olgierdkrzyzaniak.github.io/github-repos-search/](https://olgierdkrzyzaniak.github.io/github-repos-search/)
 
 ### Użyte technologie
 
