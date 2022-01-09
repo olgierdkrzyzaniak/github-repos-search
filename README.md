@@ -18,8 +18,41 @@ git clone https://github.com/olgierdkrzyzaniak/github-repos-search.git
 
 - uruchom plik index.html w przeglądarce.
 
-2. Uruchomienie strony hostowanej przez github.
-    - kliknij w w ten link:
+2. Uruchomienie przez serwer lokalny.
+    
+    Aby uruchomić musisz mieć skonfigurowany node.js
+    
+    > Ta wersja nie różni się niczym od powyższej, ale nie korzysta z kodu pliku script.js, tylko z pliku app.js i zawartości folderu lib (które są podzielonym na moduły plikiem script.js). Aby oszczędzić twój czas polecam korzystanie z opcji nr 1, natomiast ta jest bliższa temu co zastosowałbym na produkcji.
+    > 
+    
+    Instrukcje postępowania:
+    
+    - Otwórz plik `index.html` w edytorze tekstu. Zmień wiersz:
+    
+    ```jsx
+    <script src="./script.js"></script>
+    ```
+    
+    na:
+    
+    ```jsx
+    <script src="./app.js" type='module'></script>
+    ```
+    
+    - Otwórz terminal.
+    - Zainstaluj `http-server` wpisując `npm install -g http-server`
+    - Przejdź do katalogu roboczego, w którym znajduje się index.html używając komendy `cd {ścieżka folderu roboczego}` np.
+    
+    ```bash
+    cd C:\Users\Olgierd\Desktop\github-repos-search
+    ```
+    
+    - Uruchom swój serwer http, wywołując `http-server -c-1`
+    
+    Powoduje to uruchomienie serwera http Node.js, który obsługuje pliki w twoim katalogu jako pliki statyczne dostępne z `http://localhost:8080`
+
+3. Uruchomienie strony hostowanej przez github.
+    - kliknij w w ten link: [https://olgierdkrzyzaniak.github.io/github-repos-search/](https://olgierdkrzyzaniak.github.io/github-repos-search/)
 
 ### Użyte technologie
 
@@ -56,7 +89,7 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 ### Tłumaczę niektóre decyzje projektowe tutaj:
 
 - Zastosowałem podejście Mobile-first design (filozofia projektowania, która ma na celu stworzenie lepszych doświadczeń użytkownika poprzez rozpoczęcie procesu projektowania z myślą o urządzeniach mobilnych), aby zapewnić dobrą responsywność
-- poza formularzem pozwalający na wprowadzenie nazwy użytkownika oraz listą repozytoriów pojawiającą się jako wynik zdecydowałem się dodatkowo zamieścić krótkie bio wyszukiwanego użytkownika, pozwalającą sprecyzować czy odnaleźliśmy właściwą osobę, oraz dostarczającą podstawowych informacji na temat użytkownika. Nazwa użytkownika zawiera link przenoszący do strony na githubie.
+- poza formularzem pozwalającym na wprowadzenie nazwy użytkownika oraz listą repozytoriów pojawiającą się jako wynik zdecydowałem się dodatkowo zamieścić krótkie bio wyszukiwanego użytkownika, pozwalające sprecyzować czy odnaleźliśmy właściwą osobę, oraz dostarczającą podstawowych informacji na temat użytkownika. Nazwa użytkownika zawiera link przenoszący do strony na githubie.
 - Navbar z logiem i inputetm oraz page navigator pozostają widoczne u góry ekranu przy scrollowaniu, aby można było za ich pomocą wykonywać akcje natychmiastowo, nawet jeśli nie jesteśmy na górze strony.
 - Nazwa repozytorium zawiera link przenoszący do strony repozytorium na githubie.
 - Każde zwrócone repozytorium ma dodatkowo informację na temat języka, liczby gwiazdek oraz krótki opis.
@@ -67,7 +100,7 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 Badania użyteczności wykazały:
 
 - potrzebę podziału wyników na parę stron (w przypadku allegro gdzie repozytoriów jest 104 brak podziału nie stanowił takiego problemu jak np. w przypadku google, gdzie jest ich 2166)
-- dobrze aby wyświetlana była liczba zwróconych repozytoriów
+- potrzebę wyświetlania liczby zwróconych repozytoriów
 
 ### Exporty z figmy
 
