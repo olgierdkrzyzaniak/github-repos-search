@@ -151,6 +151,7 @@ div.main {
   }
 .pages {
     padding-top: 1rem;
+    display: flex;
 }
 
 /* ids styles */
@@ -165,11 +166,13 @@ div.pages {
 }
 
 a.button {
+    display: inline-block;
     text-decoration: none;
-    margin-top: 1rem;
     padding: 8px 16px;
     border-radius: 0.2rem;
     font-size: 90%;
+    min-width: 3.265rem;
+    height: inherit;
   }
   
 a.button:hover {
