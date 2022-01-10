@@ -78,7 +78,10 @@ Stwórz aplikację webową wyświetlającą listę repozytoriów dowolnego użyt
 
 - Niestety nie ma możliwości pobrania z API już posortowanej (po liczbie gwiazdek) listy repozytoriów. Może być jedno z: `created`, `updated`, `pushed`, `full_name`.
     
-    Problem w tym, że w takim razie musimy zassać całość, aby to należycie posortować po popularności, co w przypadku większych repozytoriów sprawia, że zanim wyświetlimy jakiekolwiek informacje musimy pobrać najpierw parę/paręnaście stron wyników (limit wyników na stronę to 100), a wiec wykonać parę zapytań do API. Nie udało mi się znaleźć alternatywnego, szybszego rozwiązania.
+    Problem w tym, że w takim razie musimy zassać całość, aby to należycie posortować po popularności, co w przypadku większych repozytoriów sprawia, że zanim wyświetlimy jakiekolwiek informacje musimy pobrać najpierw parę/paręnaście stron wyników (limit wyników na stronę to 100), a wiec wykonać parę zapytań do API. 
+    >  Nie udało mi się znaleźć alternatywnego, szybszego rozwiązania.
+
+    To była prawda do czasu ostatniego commita. Zmieniłem sekwencyjne wysyłanie zapytań do API na równoległe. To znacznie poprawiło szybkość działania strony.
     
 - Dzięki zastosowaniu podejścia Mobile-first design udało mi się stworzyć responsywny interfejs, bez użycia media-queries.
 
